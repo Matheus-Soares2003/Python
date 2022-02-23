@@ -11,20 +11,27 @@ def med_harmonica(num):
 
 
 def med_geometrica(num):
+    lista_num = num.copy()
     cont = 0
     media_g = 1
     for v in num:
-        num[cont] = v ** (1 / len(num))
-        media_g = media_g * num[cont]
+        lista_num[cont] = v ** (1 / len(num))
+        media_g = media_g * lista_num[cont]
         cont += 1
     
     return media_g
 
     
     
-numeros = [3, 6, 9]
-media = med_aritmetica(numeros)
-print(f"{media:.2f}")
+numeros = [12, 4, 8, 16]
+ma = med_aritmetica(numeros)
+mh = med_harmonica(numeros)
+mg = med_geometrica(numeros)
+
+print(f"""Média Aritmética de {numeros} -> {ma:.2f}
+Média Geométrica de {numeros} -> {mg:.2f}
+Média Harmônica de {numeros} -> {mh:.2f}""")
+
 
 
 
