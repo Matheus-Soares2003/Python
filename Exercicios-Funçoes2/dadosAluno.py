@@ -14,5 +14,5 @@ def notas(*num, sit=False):
     return s
         
 #Programa Principal
-resp = notas(5.5, 2.5, 1.5, sit=True)
+resp = notas(5.5, 10, 8.5, sit=True)
 print(resp)
