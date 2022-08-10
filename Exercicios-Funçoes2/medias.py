@@ -12,13 +12,10 @@ def med_harmonica(num):
 
 def med_geometrica(num):
     lista_num = num.copy()
-    cont = 0
-    media_g = 1
+    mult = 1
     for v in lista_num:
-        lista_num[cont] = v ** (1 / len(num))
-        media_g = media_g * lista_num[cont]
-        cont += 1
-    
+        mult = mult * v
+    media_g = pow(mult, (1 / len(lista_num)))
     return media_g
 
 
@@ -47,7 +44,7 @@ def desvio_padrao(num):
 
 #-------Teste das funções-------#
     
-numeros = [7, 8, 1, 3, 2, 5, 2]
+numeros = [71, 70, 73, 70, 70, 69, 70, 72, 71, 71, 69]
 ma = med_aritmetica(numeros)
 mh = med_harmonica(numeros)
 mg = med_geometrica(numeros)
